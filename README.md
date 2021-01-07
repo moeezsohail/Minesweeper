@@ -32,4 +32,4 @@ Visual demo of the application
 ## Author Info
 
 - LinkedIn - Moeez Sohail (https://www.linkedin.com/in/moeezsohail/)
-- Website - moeezsohail.github.io (https://moeezsohail.github.io/)
+- Website - https://moeezsohail.github.io/
