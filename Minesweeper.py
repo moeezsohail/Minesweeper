@@ -14,10 +14,11 @@ import random
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREY = (160, 160, 160) # Zero bombs
-BLUE = (0, 255, 255) # One bomb
-GREEN = (0, 255, 0) # Two bombs
-YELLOW = (255, 255, 0) # Three bombs
-ORANGE = (255, 165, 0) # Four bombs
+PURPLE = (238, 130, 238) # One bomb
+BLUE = (0, 255, 255) # Two bombs
+GREEN = (0, 255, 0) # Three bombs
+YELLOW = (255, 255, 0) # Four bombs
+ORANGE = (255, 165, 0) # Five bombs
 RED = (255, 0, 0) # Bomb
 WIDTH = 40 # Square Width
 HEIGHT = 40 # Square Height
@@ -94,10 +95,11 @@ def main():
     key = font.render('Key', True, WHITE)
     font.set_underline(False)
     zero = font.render('Zero', True, GREY)
-    one = font.render('One', True, BLUE)
-    two = font.render('Two', True, GREEN)
-    three = font.render('Three', True, YELLOW)
-    four = font.render('Four', True, ORANGE)
+    one = font.render('One', True, PURPLE)
+    two = font.render('Two', True, BLUE)
+    three = font.render('Three', True, GREEN)
+    four = font.render('Four', True, YELLOW)
+    five = font.render('Five', True, ORANGE)
     bomb = font.render('Bomb', True, RED)
     smallFont = pygame.font.SysFont(None, 30)
     loss = smallFont.render('You lost!', True, WHITE)
@@ -129,7 +131,8 @@ def main():
         screen.blit(two, (535, 150))
         screen.blit(three, (522, 195))
         screen.blit(four, (532, 240))
-        screen.blit(bomb, (525, 285))
+        screen.blit(five, (532, 285))
+        screen.blit(bomb, (525, 330))
         pygame.draw.rect(screen, WHITE, [530,450,80,40])
         screen.blit(reset, (540, 465))
 
@@ -142,12 +145,14 @@ def main():
                     if num == 0:
                         color = GREY
                     if num == 1:
-                        color = BLUE
+                        color = PURPLE
                     elif num == 2:
-                        color = GREEN
+                        color = BLUE
                     elif num == 3:
-                        color = YELLOW
+                        color = GREEN
                     elif num == 4:
+                        color = YELLOW
+                    elif num == 5:
                         color = ORANGE
                     elif num == 'X':
                         color = RED
